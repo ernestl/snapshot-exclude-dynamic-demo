@@ -21,5 +21,5 @@ echo "Snapshot set ID is: $SET_ID"
 # Display the metadata
 echo "Metadata for set ID $SET_ID is:"
 sleep 3
-curl -s --unix-socket /run/snapd.socket --max-time 5 http://localhost/v2/snapshots?set="$SET_ID"
+curl -s --unix-socket /run/snapd.socket --max-time 5 http://localhost/v2/snapshots?set="$SET_ID" | jq
 echo ""
