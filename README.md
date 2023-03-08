@@ -13,6 +13,14 @@ sudo snap install lxd
 sudo apt update
 sudo apt install -y git
 ```
+### Install curl
+```
+sudo snap install curl
+```
+### Install jq
+```
+sudo snap install jq
+```
 ### Clone repo
 ```
 cd ~/
