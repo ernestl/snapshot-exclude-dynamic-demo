@@ -1,25 +1,13 @@
 ## How to build, install and use the snapshot-exclude-demo snap:
 
-### Install snapcraft
+### Install snapcraft, lxd, curl, jq and git
 ```
 sudo snap install snapcraft --classic
-```
-### Install lxd
-```
 sudo snap install lxd
-```
-### Install git
-```
+sudo snap install curl
+sudo snap install jq
 sudo apt update
 sudo apt install -y git
-```
-### Install curl
-```
-sudo snap install curl
-```
-### Install jq
-```
-sudo snap install jq
 ```
 ### Clone repo
 ```
