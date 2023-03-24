@@ -21,8 +21,28 @@ snapcraft --use-lxd --debug
 ```
 ### Install the snap (note: this is a development mode snap)
 ```
-sudo snap install snapshot-exclude-demo_0.1_amd64.snap --devmode --dangerous 
+sudo snap install snapshot-exclude-demo_0.1_amd64.snap --devmode --dangerous
 ```
+> ⓘ This snap uses devmode confinement as specified in `snapcraft.yaml` top-level metadata
+
+### Inspect the content of the snap
+```
+unsquashfs -f snapshot-exclude-demo_0.1_amd64.snap
+tree squashfs-root
+```
+This shows the optional metadata file `snapshots.yaml` installed into the snap meta directory:
+```
+squashfs-root
+├── bin
+│   ├── bash.sh
+│   ├── create-system-data.sh
+│   └── create-user-data.sh
+└── meta
+    ├── gui
+    ├── snapshots.yaml
+    └── snap.yaml
+```
+
 ### Run the snap bash application to create $SNAP_USER_COMMON and $SNAP_USER_DATA and exit
 ```
 snapshot-exclude-demo.bash
