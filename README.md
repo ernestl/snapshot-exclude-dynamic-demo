@@ -176,3 +176,7 @@ as well as the user data that was not excluded from the snapshot in ~/snap/snaps
 ```
 The static exclusions defined in `snapshots.yaml` is always taken into account, but the exclusion are not included in the snapshot options metadata.
 The dynamic exclusions are applied as requested per the "snapshot-options" definition for the REST API call, only for that call, and included in the snapshot options metadata.
+
+### Diagram illustrating the combination of dynamic (specified with REST API request) and static (specified at snap build time) snapshot data exclusion during the REST API based save and snap based restore actions:
+
+![Snapshot-exclusion-dynamic-demo](https://user-images.githubusercontent.com/5872705/227462423-9fe891d0-f5a5-4312-94ab-186a378b850a.png)
